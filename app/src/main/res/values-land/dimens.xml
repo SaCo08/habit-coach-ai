@@ -1,0 +1,23 @@
+<resources>
+    <!-- Landscape adjustments: reduce vertical spacing to fit more content -->
+    <dimen name="margin_horizontal">12dp</dimen>
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="padding_default">12dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+
+    <dimen name="progress_circle_size">280dp</dimen>
+
+    <dimen name="text_percentage">34sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_subtitle">13sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+
+    <dimen name="action_button_height">52dp</dimen>
+    <dimen name="fab_margin">48dp</dimen>
+
+    <dimen name="emoji_size">56sp</dimen>
+    <dimen name="habit_emoji_size">20sp</dimen>
+    <dimen name="habit_name_size">16sp</dimen>
+
+    <dimen name="habit_item_padding">12dp</dimen>
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_light">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/black"
+            app:navigationIconTint="@color/black" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Landscape variant: reduce sizes/paddings so the Analyze button fits without scrolling -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/aiCoachScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_default">
+
+            <!-- AI Coach Character/Header (smaller) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_emoji"
+                    android:textSize="@dimen/emoji_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ai_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvFrequencyStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_frequency_default"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+
+            <!-- Data Summary Card (smaller paddings and fonts) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ai_data_label"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:paddingBottom="6dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/tvProgressData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_default"
+                    android:text="@string/ai_no_habits"
+                    android:textColor="#424242"
+                    android:fontFamily="monospace"
+                    android:textSize="@dimen/text_small" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- AI Response Card (smaller) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCoachInsight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ai_coach_advice"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/tvCoachMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/ai_thinking"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_subtitle"
+                        android:lineSpacingExtra="2dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Area: smaller height so it fits on shorter landscape screens -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGenerateInsight"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_button_height"
+                android:text="@string/ai_analyze_button"
+                app:cornerRadius="24dp"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ai_tip_change_frequency"
+                android:textColor="#757575"
+                android:textSize="@dimen/text_small"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

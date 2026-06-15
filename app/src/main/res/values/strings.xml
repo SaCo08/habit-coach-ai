@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Habit Coach</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_manage_habits">Manage Habits</string>
+    <string name="action_analytics">Analytics</string>
+    <string name="action_AI">AI Coach</string>
+
+    <!-- AI Coach strings -->
+    <string name="ai_emoji">🤖</string>
+    <string name="ai_title">Your Personal AI Coach</string>
+    <string name="ai_frequency_default">Frequency: Daily Summary</string>
+    <string name="ai_data_label">Data to be analyzed</string>
+    <string name="ai_no_habits">No habits tracked yet.</string>
+    <string name="ai_coach_advice">Coach Advice</string>
+    <string name="ai_thinking">Thinking...</string>
+    <string name="ai_analyze_button">Analyze My Progress</string>
+    <string name="ai_tip_change_frequency">Tip: You can change the analysis frequency in Settings.</string>
+</resources>
