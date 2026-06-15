@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/habitCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_horizontal"
+    android:layout_marginVertical="@dimen/margin_small"
+    app:cardCornerRadius="@dimen/card_corner_12"
+    app:cardElevation="@dimen/card_elevation_small"
+    app:strokeWidth="@dimen/stroke_width_0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/habit_item_padding">
+
+        <TextView
+            android:id="@+id/habitEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/habit_emoji_size"
+            android:text="⭐" />
+
+        <TextView
+            android:id="@+id/habitName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_weight="1"
+            android:text="Habit Name"
+            android:textSize="@dimen/habit_name_size"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/checkMark"
+            android:layout_width="@dimen/checkmark_size"
+            android:layout_height="@dimen/checkmark_size"
+            android:src="@android:drawable/checkbox_on_background"
+            android:visibility="gone"
+            app:tint="@color/white" />
+
+        <CheckBox
+            android:id="@+id/habitCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:buttonTint="@color/purple_500" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            android:visibility="gone"
+            android:contentDescription="Delete habit" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

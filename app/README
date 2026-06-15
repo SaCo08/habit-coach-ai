@@ -1,0 +1,67 @@
+Habit Coach AI
+
+An AI-powered habit and productivity coach that helps users build better habits, stay accountable, and achieve their goals through personalized guidance and progress tracking.
+
+Features
+- AI Habit Coach:
+Chat with an AI assistant for motivation and advice.
+Receive personalized suggestions via daily notifications based on your habits and goals.
+- Task & Habit Management:
+Create daily habits and tasks.
+Mark habits as completed.
+Track streaks and consistency.
+- Progress Tracking:
+Visualize progress over time.
+Monitor completed habits and achievements.
+- Goal Setting:
+Break goals into manageable habits.
+Customizable Experience:
+Notification preferences
+Dark/light mode
+Personalized coaching style
+
+Motivation:
+Building habits is difficult, and many people struggle to stay consistent. Habit Coach AI
+was created to provide users with an intelligent and supportive assistant that not
+only tracks habits but also offers encouragement, accountability, and actionable
+advice tailored to their goals.
+The aim is to combine habit tracking with AI to make self-improvement
+more engaging and effective.
+
+Tech Stack:
+Frontend: Android (Java), XML layouts
+Knowledge Layer (Foundry IQ Engine): Azure AI Search with Semantic Ranker enabled
+Storage Layer: Azure Blob Storage (for holding coach guidelines and document data)
+LLM Reasoning Brain: OpenAI gpt-4o-mini accessed via the Azure AI Inference SDK
+
+Tools:
+Android Studio, Git & GitHub, Azure AI Inference SDK for Java, Azure AI Search SDK, GitHub Copilot, Figma (for design)
+
+How It Works:
+The user creates habits and goals.
+Habits are tracked daily.
+The AI coach analyzes progress and user input.
+Personalized recommendations and motivational messages are generated.
+Users review their progress and continue improving through a streaks page.
+The user creates habits and logs progress.
+
+Example Use Cases:
+Build a daily study routine.
+Develop healthier habits.
+Stay accountable for fitness goals.
+Improve productivity and time management.
+Receive AI-powered motivation when struggling to stay consistent.
+
+Setup & Installation
+1. Clone this repository to your local machine.
+2. Open the project in Android Studio.
+3. Ensure you have internet permissions enabled in your `AndroidManifest.xml`.
+4. Sync the Gradle project to download the Azure Inference and Search SDK dependencies.
+5. Add your Azure AI Search Endpoint, Primary Admin Key, Index Name, and GitHub Token to your configuration file.
+    1. Create a file named `secrets.properties` in the root directory of the project.
+    2. Add the following keys with your specific deployment coordinates:
+       SEARCH_ENDPOINT="https://<your-search-service>.search.windows.net"
+       SEARCH_KEY="<your-azure-admin-key>"
+       INDEX_NAME="<your-index-name>"
+       GITHUB_TOKEN="<your-github-models-token>"
+6. Build and run the application on an emulator or physical Android device.
